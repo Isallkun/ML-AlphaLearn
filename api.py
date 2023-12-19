@@ -35,9 +35,9 @@ if __name__ == '__main__':
     except:
         port = 12345 # If you don't provide any port the port will be set to 12345
 
-    lr = joblib.load("recommend.pkl") # Load "model.pkl"
+   model = load_model('recommender_no_rev.h5') # Load "recommender_no_rev.h5"
     print ('Model loaded')
-    model_columns = joblib.load("recommend_columns.pkl") # Load "model_columns.pkl"
+    model_columns = load_model("recommend_columns.pkl") # Load "model_columns.pkl"
     print ('Model columns loaded')
 
     app.run(port=port, debug=True)
