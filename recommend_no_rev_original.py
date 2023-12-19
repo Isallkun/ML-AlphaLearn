@@ -105,11 +105,11 @@ while True:
         break
 
 # The code below is to save your model as a .h5 file.
-from tensorflow.keras.models import save_model
+#from tensorflow.keras.models import save_model
 # The code below is to save your model as a .h5 file.
 if __name__ == '__main__':
     # DO NOT CHANGE THIS CODE
-    model.save("recommender_no_rev.h5")
+    model.save('recommender_no_rev.h5')
 
 from keras.models import load_model
 model = load_model('recommender_no_rev.h5')
