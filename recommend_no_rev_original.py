@@ -105,18 +105,24 @@ while True:
         break
 
 # The code below is to save your model as a .h5 file.
-#if __name__ == '__main__':
+from tensorflow.keras.models import save_model
+# The code below is to save your model as a .h5 file.
+if __name__ == '__main__':
     # DO NOT CHANGE THIS CODE
-    #model.save("recommender_no_rev.h5")
+    model.save("recommender_no_rev.h5")
+
+from keras.models import load_model
+model = load_model('recommender_no_rev.h5')
+print("model loaded")
 
 # Save your model
-joblib.dump(model, 'recommend.pkl')
-print("Model dumped!")
+#joblib.dump(model, 'recommend.pkl')
+#print("Model dumped!")
 
 # Load the model that you just saved
-lr = joblib.load('recommend.pkl')
+#lr = joblib.load('recommend.pkl')
 
 # Saving the data columns from training
 model_columns = list(df.columns)
 joblib.dump(model_columns, 'recommend_columns.pkl')
-print("Models columns dumped!")
+#print("Models columns dumped!")
