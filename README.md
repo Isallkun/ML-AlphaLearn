@@ -1,2 +1,2 @@
 # ML-AlphaLearn
-Repository for Ml Model, Flask API, etc.
+Repository for ML Model, Flask API, etc.
